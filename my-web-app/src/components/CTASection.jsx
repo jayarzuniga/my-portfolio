@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const CTASection = () => {
   return (
@@ -14,7 +15,7 @@ const CTASection = () => {
           
           {/* Content */}
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-h1 font-bold text-text-primary mb-4">
+            <h2 className="text-4xl lg:text-5xl font-black text-text-primary mb-4">
               Let's Create Something Amazing Together
             </h2>
             <p className="text-base text-text-secondary mb-8 max-w-xl mx-auto">
@@ -22,18 +23,11 @@ const CTASection = () => {
               Whether you need a complete solution or just some guidance, I'm here to help.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button 
                 variant="primary" 
                 size="large"
-                to="/contact-me"
-              >
-                Start a Project
-              </Button>
-              <Button 
-                variant="secondary" 
-                size="large"
-                href="mailto:hello@jayr.design"
+                href="mailto:jonhronelzuniga@gmail.com?subject=Hello&body=Hello%20Jonh,%0A%0AI%20would%20like%20to%20get%20in%20touch%20with%20you."
               >
                 Send an Email
               </Button>
@@ -45,28 +39,22 @@ const CTASection = () => {
               </p>
               <div className="flex justify-center gap-6">
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://linkedin.com/in/jonhzuniga" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors"
                 >
-                  LinkedIn
+                  <FaLinkedin className="text-2xl text-black" />
+                  <span>LinkedIn</span>
                 </a>
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/jayarzuniga" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors"
                 >
-                  GitHub
-                </a>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-primary transition-colors"
-                >
-                  Twitter
+                  <FaGithub className="text-2xl text-black" />
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>

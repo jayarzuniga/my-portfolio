@@ -134,3 +134,16 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Button Border Radius */
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.rounded-medium {
+  border-radius: 0.75rem;
+}
+
+.rounded-large {
+  border-radius: 1rem;
+}

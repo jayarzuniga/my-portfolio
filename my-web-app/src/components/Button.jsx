@@ -48,8 +48,14 @@ const Button = ({
   }
   
   if (href) {
+    const isMailto = href.startsWith('mailto:');
     return (
-      <a href={href} className={buttonClasses} target="_blank" rel="noopener noreferrer" {...props}>
+      <a 
+        href={href} 
+        className={buttonClasses} 
+        {...(!isMailto && { target: "_blank", rel: "noopener noreferrer" })}
+        {...props}
+      >
         {content}
       </a>
     );
