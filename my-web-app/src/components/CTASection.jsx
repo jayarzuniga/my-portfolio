@@ -27,9 +27,9 @@ const CTASection = () => {
               <Button 
                 variant="primary" 
                 size="large"
-                href="mailto:jonhronelzuniga@gmail.com?subject=Hello&body=Hello%20Jonh,%0A%0AI%20would%20like%20to%20get%20in%20touch%20with%20you."
+                to="/contact-me"
               >
-                Send an Email
+                Contact Us
               </Button>
             </div>
             

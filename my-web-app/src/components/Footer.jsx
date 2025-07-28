@@ -11,10 +11,10 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: 'UX/UI Design', path: '/services#ux-ui' },
+    { name: 'AI Integration', path: '/services#strategy' },
+    { name: 'DevOps', path: '/services#ux-ui' },
     { name: 'Web Development', path: '/services#web-dev' },
     { name: 'Mobile Design', path: '/services#mobile' },
-    { name: 'Product Strategy', path: '/services#strategy' },
   ];
 
   const resources = [
@@ -25,9 +25,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaLinkedin />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <FaGithub />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <FaTwitter />, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: <FaLinkedin />, href: 'https://linkedin.com/in/jonhzuniga', label: 'LinkedIn' },
+    { icon: <FaGithub />, href: 'https://github.com/jayarzuniga', label: 'GitHub' },
   ];
 
   return (
@@ -48,7 +47,7 @@ const Footer = () => {
               className="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
             >
               <FaEnvelope />
-              <span className="text-base font-medium">hello@jayr.design</span>
+              <span className="text-base font-medium">jonhronelzuniga@gmail.com</span>
             </a>
             <div className="flex items-center gap-4 mt-6">
               {socialLinks.map((link) => (
@@ -85,7 +84,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-base font-semibold text-text-primary mb-4">Services</h3>
+            <h3 className="text-base font-semibold text-text-primary mb-4">Skills</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>

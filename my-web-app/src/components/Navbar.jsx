@@ -9,9 +9,9 @@ const Navbar = () => {
 
   const pages = [
     { name: 'Home', path: '/' },
-    { name: 'Portfolio', path: '/projects' },
-    { name: 'Testimonial', path: '/testimonials' },
     { name: 'About', path: '/about-me' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Achievements', path: '/testimonials' },
   ];
 
   const socialLinks = [
