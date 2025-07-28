@@ -21,8 +21,32 @@ const Hero = () => {
   ];
 
   return (
-    <section className="section pt-32 pb-20">
-      <div className="container">
+    <section className="section pt-32 pb-20 relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-background-darker via-background-dark to-background-card">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          onError={(e) => {
+            // Hide video on error and show fallback background
+            e.target.style.display = 'none';
+          }}
+        >
+          <source src="/src/assets/videos/ai-background.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+        </video>
+        
+        {/* Dark overlay to ensure readability and match color scheme */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background-darker/95 via-background-dark/90 to-background-darker/95"></div>
+        
+        {/* Primary color accent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/10"></div>
+      </div>
+      
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           {/* Left Content */}
           <div className="animate-fade-in text-left">
