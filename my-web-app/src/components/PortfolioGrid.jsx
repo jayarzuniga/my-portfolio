@@ -18,7 +18,7 @@ const PortfolioGrid = () => {
       category: 'IOT | AI | Web Application',
       media: '/src/assets/videos/Eye-of-Amihan.mp4', 
       type: 'video',
-      description: 'Weather monitoring system with AI-powered forecasting and real-time environmental data analysis.',
+      description: 'Flood monitoring system with AI-powered forecasting and real-time environmental data analysis.',
       isCaseStudy: true,
     },
     {
@@ -27,7 +27,7 @@ const PortfolioGrid = () => {
       category: 'AI | Web Application',
       media: '/src/assets/images/ramelyn-catering.png', 
       type: 'image',
-      description: 'Full-stack catering management platform with AI-powered booking optimization and inventory tracking.',
+      description: 'Full-stack catering management platform with AI-powered recommender system.',
       isCaseStudy: true,
     },
   ];

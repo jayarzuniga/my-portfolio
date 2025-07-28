@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import PortfolioGrid from "../components/PortfolioGrid";
-import Testimonial from "../components/Testimonial";
+import Achievements from "../components/Testimonial";
 import CTASection from "../components/CTASection";
 
 const Home = () => {
@@ -23,8 +23,8 @@ const Home = () => {
         {/* Portfolio Grid */}
         <PortfolioGrid />
         
-        {/* Testimonial Section */}
-        <Testimonial />
+        {/* Achievements Section */}
+        <Achievements />
         
         {/* CTA Section */}
         <CTASection />

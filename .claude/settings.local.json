@@ -6,7 +6,9 @@
       "Bash(npx tailwindcss:*)",
       "Bash(del nul)",
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebFetch(domain:news.amaes.edu.ph)",
+      "WebFetch(domain:www.bloggersphilippines.com)"
     ],
     "deny": []
   }

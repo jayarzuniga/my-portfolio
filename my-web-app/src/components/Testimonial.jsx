@@ -1,142 +1,244 @@
 import React from 'react';
-import { FaStar, FaQuoteLeft } from 'react-icons/fa';
+import { FaTrophy, FaMedal, FaCrown, FaAward, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
 
-const Testimonial = () => {
-  const testimonials = [
+const Achievements = () => {
+  const achievements = [
     {
       id: 1,
-      quote: "Jay-R's expertise in cloud architecture transformed our infrastructure. The migration was seamless, and we've seen a 40% improvement in performance.",
-      author: {
-        name: "Sarah Chen",
-        title: "CTO at TechStart",
-        image: "/src/assets/images/my-image.JPG",
-      },
-      rating: 5,
+      title: "AppCon 2024 Grand Winner",
+      project: "TransiTech: Smart Transportation System",
+      award: "Grand Prize Winner",
+      prize: "₱100,000",
+      competition: "AppCon 2024",
+      participants: "1,042 participants from 79 universities",
+      technologies: ["AI Crowd Prediction", "IoT Integration", "Real-time Analytics", "Mobile Development"],
+      description: "Led development of an innovative transportation management system with AI-powered crowd prediction and real-time data synchronization.",
+      icon: <FaCrown />,
+      color: "from-yellow-400 to-yellow-600",
+      year: "2024",
+      image: "/src/assets/images/Appcon2024.jpg",
+      sourceLink: "https://www.bloggersphilippines.com/2025/07/grand-winner-of-appcon-2024-competition.html",
     },
     {
       id: 2,
-      quote: "Working with Jay-R was a game-changer for our startup. His full-stack skills and attention to detail delivered a product that exceeded our expectations.",
-      author: {
-        name: "Michael Rodriguez",
-        title: "Founder of InnovateLab",
-        image: "/src/assets/images/my-image.JPG",
-      },
-      rating: 5,
-    },
-    {
-      id: 3,
-      quote: "The UI/UX designs Jay-R created for our platform were intuitive and beautiful. Our user engagement increased by 60% after the redesign.",
-      author: {
-        name: "Emily Thompson",
-        title: "Product Manager at DesignCo",
-        image: "/src/assets/images/my-image.JPG",
-      },
-      rating: 5,
+      title: "AppCon 2023 Best Technology Award",
+      project: "AI-Powered Social Innovation Platform",
+      award: "Best Technology Award",
+      prize: "₱30,000",
+      competition: "AppCon 2023",
+      participants: "222 teams nationwide",
+      technologies: ["Artificial Intelligence", "Blockchain", "Web 5.0", "Internet of Things"],
+      description: "Part of AMA University Conquestadors team that developed cutting-edge solutions using emerging technologies to address social issues.",
+      icon: <FaTrophy />,
+      color: "from-blue-400 to-blue-600",
+      year: "2023",
+      image: "/src/assets/images/Appcon2023.jpg",
+      sourceLink: "https://news.amaes.edu.ph/2024/07/ama-university-conquestadors-emerge.html",
     },
   ];
 
-  const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
+  const [currentAchievement, setCurrentAchievement] = React.useState(0);
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  const nextAchievement = () => {
+    setCurrentAchievement((prev) => (prev + 1) % achievements.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevAchievement = () => {
+    setCurrentAchievement((prev) => (prev - 1 + achievements.length) % achievements.length);
   };
 
-  const current = testimonials[currentTestimonial];
+  const current = achievements[currentAchievement];
 
   return (
-    <section className="section bg-background-dark">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-h1 font-bold text-text-primary mb-2">
-            Client Testimonials
-          </h2>
-          <p className="text-base text-text-secondary">
-            What my clients say about working with me
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-background-dark via-background-darker to-background-card relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-32 h-32 bg-primary/8 rounded-full blur-2xl animate-bounce" style={{animationDuration: '4s'}}></div>
+      
+      <div className="container relative z-10">
+        <div className="text-center mb-16">
+          <div className="relative inline-block mb-6">
+            <h2 className="text-4xl lg:text-6xl font-black text-text-primary mb-4">
+              Greatest <span className="text-primary">Achievements</span> in Tech
+            </h2>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          </div>
+          <p className="text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto">
+            Recognized excellence in AI, IoT, and innovative technology solutions at national competitions
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-background-card p-8 md:p-12 rounded-xl relative">
-            {/* Quote Icon */}
-            <FaQuoteLeft className="text-5xl text-primary opacity-20 absolute top-8 left-8" />
-            
-            {/* Testimonial Content */}
-            <div className="relative z-10">
-              <p className="text-h3 text-text-primary leading-relaxed mb-8 italic">
-                "{current.quote}"
-              </p>
-              
-              {/* Author Info */}
-              <div className="flex items-center gap-4 mb-6">
-                <img
-                  src={current.author.image}
-                  alt={current.author.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="text-base font-semibold text-text-primary">
-                    {current.author.name}
-                  </h4>
-                  <p className="text-small text-text-secondary">
-                    {current.author.title}
-                  </p>
+        {/* Achievement Card */}
+        <div className="max-w-5xl mx-auto">
+          <div className="relative">
+            {/* Glassmorphism Card */}
+            <div className="bg-gradient-to-br from-background-card/60 to-background-overlay/40 backdrop-blur-xl rounded-3xl border border-ui-border/20 shadow-2xl p-8 lg:p-12 relative overflow-hidden">
+              {/* Award Icon with Glow */}
+              <div className="absolute top-8 right-8 opacity-10">
+                <div className={`text-8xl bg-gradient-to-br ${current.color} bg-clip-text text-transparent`}>
+                  {current.icon}
                 </div>
               </div>
               
-              {/* Rating */}
-              <div className="flex gap-1 mb-8">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar
-                    key={i}
-                    className={`text-xl ${
-                      i < current.rating ? 'text-primary' : 'text-ui-border'
-                    }`}
-                  />
-                ))}
+              {/* Achievement Content - 2x2 Grid Layout */}
+              <div className="relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Top Row */}
+                  <div className="space-y-6">
+                    {/* Picture */}
+                    {current.image && (
+                      <div>
+                        <img 
+                          src={current.image} 
+                          alt={current.title}
+                          className="w-full rounded-2xl shadow-lg border border-ui-border/20 hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-6">
+                    {/* Details */}
+                    <div className="space-y-4">
+                      {/* Award Badge */}
+                      <div className="inline-flex items-center gap-3">
+                        <div className={`p-3 rounded-2xl bg-gradient-to-br ${current.color} shadow-lg`}>
+                          <div className="text-2xl text-white">
+                            {current.icon}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-primary uppercase tracking-wider">
+                            {current.year}
+                          </div>
+                          <div className={`text-lg font-bold bg-gradient-to-r ${current.color} bg-clip-text text-transparent`}>
+                            {current.award}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Title & Project */}
+                      <div>
+                        <h3 className="text-2xl lg:text-3xl font-black text-text-primary mb-2">
+                          {current.title}
+                        </h3>
+                        <h4 className="text-lg lg:text-xl text-primary font-semibold">
+                          {current.project}
+                        </h4>
+                      </div>
+                      
+                      {/* Description */}
+                      <p className="text-base lg:text-lg text-text-secondary leading-relaxed">
+                        {current.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom Row */}
+                  <div>
+                    {/* Cards */}
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      <div className="bg-background-dark/50 rounded-xl p-3">
+                        <div className="text-xs text-text-secondary mb-1">Competition</div>
+                        <div className="font-semibold text-text-primary text-xs lg:text-sm">{current.competition}</div>
+                      </div>
+                      <div className="bg-background-dark/50 rounded-xl p-3">
+                        <div className="text-xs text-text-secondary mb-1">Prize</div>
+                        <div className={`text-lg lg:text-xl font-black bg-gradient-to-r ${current.color} bg-clip-text text-transparent`}>
+                          {current.prize}
+                        </div>
+                      </div>
+                      <div className="bg-background-dark/50 rounded-xl p-3">
+                        <div className="text-xs text-text-secondary mb-1">Year</div>
+                        <div className="font-semibold text-text-primary text-sm">{current.year}</div>
+                      </div>
+                      <div className="bg-background-dark/50 rounded-xl p-3">
+                        <div className="text-xs text-text-secondary mb-1">Participants</div>
+                        <div className="text-xs text-primary">{current.participants}</div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {/* Technologies Used */}
+                    <div>
+                      <div className="text-sm text-text-secondary mb-3">Technologies Used</div>
+                      <div className="flex flex-wrap gap-2">
+                        {current.technologies.map((tech, index) => (
+                          <span 
+                            key={index}
+                            className="px-3 py-1 bg-primary/20 text-primary text-sm font-medium rounded-full border border-primary/30"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Read Full Article */}
+                    {current.sourceLink && (
+                      <div className="w-full">
+                        <a
+                          href={current.sourceLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-primary/20 to-primary/10 backdrop-blur-sm border border-primary/30 rounded-2xl font-semibold text-primary hover:from-primary hover:to-primary-dark hover:text-background-darker transition-all duration-500 hover:scale-105 hover:shadow-glow group"
+                        >
+                          <FaExternalLinkAlt className="group-hover:rotate-12 transition-transform duration-300" />
+                          <span>Read Full Article</span>
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
-            
+
             {/* Navigation */}
-            <div className="flex justify-center gap-4">
-              <button
-                onClick={prevTestimonial}
-                className="p-2 rounded-full bg-background-dark hover:bg-ui-hover transition-colors"
-                aria-label="Previous testimonial"
-              >
-                <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              
-              {/* Dots */}
-              <div className="flex items-center gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === currentTestimonial
-                        ? 'w-8 bg-primary'
-                        : 'bg-ui-border hover:bg-text-secondary'
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
+            <div className="flex items-center justify-center mt-8">
+              <div className="flex items-center gap-6">
+                <button
+                  onClick={prevAchievement}
+                  className="p-4 rounded-2xl bg-gradient-to-r from-background-dark/60 to-background-overlay/40 backdrop-blur-sm border border-ui-border/20 hover:border-primary/30 text-text-secondary hover:text-primary transition-all duration-300 hover:scale-110 group"
+                  aria-label="Previous achievement"
+                >
+                  <FaChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                </button>
+                
+                {/* Achievement Indicators */}
+                <div className="flex items-center gap-3">
+                  {achievements.map((achievement, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentAchievement(index)}
+                      className={`relative transition-all duration-300 ${
+                        index === currentAchievement 
+                          ? 'scale-125' 
+                          : 'hover:scale-110'
+                      }`}
+                      aria-label={`Go to achievement ${index + 1}`}
+                    >
+                      <div className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                        index === currentAchievement 
+                          ? `bg-gradient-to-r ${achievement.color} shadow-lg` 
+                          : 'bg-ui-border hover:bg-primary/50'
+                      }`} />
+                      {index === currentAchievement && (
+                        <div className={`absolute inset-0 w-4 h-4 rounded-full bg-gradient-to-r ${achievement.color} animate-ping opacity-75`} />
+                      )}
+                    </button>
+                  ))}
+                </div>
+                
+                <button
+                  onClick={nextAchievement}
+                  className="p-4 rounded-2xl bg-gradient-to-r from-background-dark/60 to-background-overlay/40 backdrop-blur-sm border border-ui-border/20 hover:border-primary/30 text-text-secondary hover:text-primary transition-all duration-300 hover:scale-110 group"
+                  aria-label="Next achievement"
+                >
+                  <FaChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-2 rounded-full bg-background-dark hover:bg-ui-hover transition-colors"
-                aria-label="Next testimonial"
-              >
-                <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
@@ -145,4 +247,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default Achievements;
