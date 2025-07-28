@@ -1,22 +1,136 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  background-color: #FBFBFB;
+@theme {
+  --color-primary: #FFBA00;
+  --color-primary-dark: #FFA500;
+  --color-primary-light: #FFD700;
+  
+  --color-background-dark: #2B2B3D;
+  --color-background-darker: #1E1E2E;
+  --color-background-card: #33334D;
+  --color-background-overlay: #282838;
+  --color-background-light: #3D3D5A;
+  
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #E0E0E8;
+  --color-text-muted: #A0A0B0;
+  --color-text-dark: #6B6B80;
+  
+  --color-accent-blue: #4285F4;
+  --color-accent-linkedIn: #0A66C2;
+  --color-accent-meta: #1877F2;
+  --color-accent-slack: #4A154B;
+  
+  --color-ui-border: #44445A;
+  --color-ui-hover: #3D3D5A;
+  
+  --font-family-primary: 'Ubuntu', sans-serif;
+  --font-family-heading: 'Ubuntu', sans-serif;
 }
 
+/* Base Styles */
+body {
+  background-color: var(--color-bg-darker);
+  color: var(--color-text-primary);
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+/* Animations */
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(50px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out forwards;
+@keyframes slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
+@keyframes scale-in {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes underline {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out forwards;
+}
+
+.animate-underline {
+  animation: underline 0.3s ease-out forwards;
+}
+
+/* Animation Delays */
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ui-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ui-hover);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(30, 30, 46, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
