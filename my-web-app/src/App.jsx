@@ -8,7 +8,7 @@ import Testimonials from './pages/Testimonials';
 function App() {
 
   return (
-      <Router>
+      <Router basename="/my-portfolio">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<AboutMe />} />
