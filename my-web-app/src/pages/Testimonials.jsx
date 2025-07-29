@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Testimonial from "../components/Testimonial";
+import achievementVideo from '../assets/videos/achievement.mp4';
 
 const Testimonials = () => {
   return (
@@ -19,7 +20,7 @@ const Testimonials = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/src/assets/videos/achievement.mp4" type="video/mp4" />
+            <source src={achievementVideo} type="video/mp4" />
           </video>
           
           {/* Dark Overlay */}

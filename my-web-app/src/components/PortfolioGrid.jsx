@@ -60,7 +60,7 @@ const PortfolioGrid = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
             <Link
-              to={`/projects/${item.id}`}
+              to="/under-development"
               key={item.id}
               className="group block relative transform hover:-translate-y-4 hover:scale-105 transition-all duration-500 animate-fade-in"
               style={{
