@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import coolLogo from '../assets/images/cool.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ const Navbar = () => {
           {/* Logo/Brand */}
           <Link to="/" className="flex items-center gap-2 group">
             <img 
-              src="/src/assets/images/cool.png" 
+              src={coolLogo} 
               alt="Logo" 
               className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300"
             />

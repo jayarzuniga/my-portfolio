@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './Button';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import myImage from '../assets/images/My-Image.png';
+import aiBackgroundVideo from '../assets/videos/ai-background.mp4';
 
 const Hero = () => {
   const socialLinks = [
@@ -35,7 +37,7 @@ const Hero = () => {
             e.target.style.display = 'none';
           }}
         >
-          <source src="/src/assets/videos/ai-background.mp4" type="video/mp4" />
+          <source src={aiBackgroundVideo} type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
         </video>
         
@@ -73,7 +75,7 @@ const Hero = () => {
           <div className="relative animate-scale-in animation-delay-300 flex justify-center">
             <div className="relative z-10">
               <img 
-                src="/src/assets/images/My-Image.png" 
+                src={myImage} 
                 alt="Jay-R Profile" 
                 className="w-64 h-80 lg:w-72 lg:h-96 rounded-full object-cover shadow-large"
               />

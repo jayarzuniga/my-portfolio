@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import transitechVideo from '../assets/videos/transitech_vid.mp4';
+import eyeOfAmihanVideo from '../assets/videos/Eye-of-Amihan.mp4';
+import ramelynCateringImage from '../assets/images/ramelyn-catering.png';
 
 const PortfolioGrid = () => {
   const portfolioItems = [
@@ -7,7 +10,7 @@ const PortfolioGrid = () => {
       id: 1,
       title: 'Transitech: AI and IOT Solution',
       category: 'IOT | AI | Mobile | Web Development',
-      media: '/src/assets/videos/transitech_vid.mp4', 
+      media: transitechVideo, 
       type: 'video',
       description: 'Smart IoT platform integrating AI for predictive analytics and automated system management.',
       isCaseStudy: true,
@@ -16,7 +19,7 @@ const PortfolioGrid = () => {
       id: 2,
       title: 'Eye of Amihan: AI and IOT Solution',
       category: 'IOT | AI | Web Application',
-      media: '/src/assets/videos/Eye-of-Amihan.mp4', 
+      media: eyeOfAmihanVideo, 
       type: 'video',
       description: 'Flood monitoring system with AI-powered forecasting and real-time environmental data analysis.',
       isCaseStudy: true,
@@ -25,7 +28,7 @@ const PortfolioGrid = () => {
       id: 3,
       title: 'E-commerce/Booking Management Platform',
       category: 'AI | Web Application',
-      media: '/src/assets/images/ramelyn-catering.png', 
+      media: ramelynCateringImage, 
       type: 'image',
       description: 'Full-stack catering management platform with AI-powered recommender system.',
       isCaseStudy: true,

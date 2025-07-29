@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaTrophy, FaMedal, FaCrown, FaAward, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+import appcon2024Image from '../assets/images/Appcon2024.jpg';
+import appcon2023Image from '../assets/images/Appcon2023.jpg';
 
 const Achievements = () => {
   const achievements = [
@@ -16,7 +18,7 @@ const Achievements = () => {
       icon: <FaCrown />,
       color: "from-yellow-400 to-yellow-600",
       year: "2024",
-      image: "/src/assets/images/Appcon2024.jpg",
+      image: appcon2024Image,
       sourceLink: "https://www.bloggersphilippines.com/2025/07/grand-winner-of-appcon-2024-competition.html",
     },
     {
@@ -32,7 +34,7 @@ const Achievements = () => {
       icon: <FaTrophy />,
       color: "from-blue-400 to-blue-600",
       year: "2023",
-      image: "/src/assets/images/Appcon2023.jpg",
+      image: appcon2023Image,
       sourceLink: "https://news.amaes.edu.ph/2024/07/ama-university-conquestadors-emerge.html",
     },
   ];
