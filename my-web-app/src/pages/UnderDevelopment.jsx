@@ -9,7 +9,7 @@ const UnderDevelopment = () => {
     <div className="min-h-screen bg-background-darker">
       <Navbar />
       
-      <main className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <main className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32">
         {/* Background Decorations */}
         <div className="absolute top-20 right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 left-20 w-32 h-32 bg-primary/8 rounded-full blur-2xl" style={{animationDuration: '4s'}}></div>
@@ -38,7 +38,7 @@ const UnderDevelopment = () => {
             <div className="h-1 w-32 bg-primary mx-auto mb-8"></div>
             
             <p className="text-xl text-text-secondary mb-8 animate-fade-in animation-delay-200 leading-relaxed">
-              This project case study is currently being crafted with attention to detail. 
+              This project details is currently being crafted with attention to detail. 
               I'm working hard to bring you comprehensive insights into the development process, 
               challenges overcome, and solutions implemented.
             </p>
